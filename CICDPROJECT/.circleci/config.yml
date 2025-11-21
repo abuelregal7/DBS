@@ -1,0 +1,105 @@
+# .circleci/config.yml
+version: 2.1
+jobs:
+  build:
+    macos:
+      xcode: "15.2.0"
+    environment:
+      RUBY_VERSION: "2.7.4"
+      MATCH_PASSWORD: CICDPROJECT
+      MATCH_GIT_BASIC_AUTHORIZATION: YWJ1eWFzZW5AeWFob28uY29tOmdocF9tZjFkdXVlUDk1RHFpWXVjaWhwR1FTc25yRFU5bFAxcTJHVW0=
+      FASTLANE_USER: ahmed.abuelregal@expertapps.com.sa
+      FASTLANE_PASSWORD: A911998a@
+      FASTLANE_SESSION: 837071
+      
+    steps:
+      - checkout
+
+      - run:
+          name: Install rbenv and Ruby 2.7.4
+          command: |
+            brew update
+            brew install rbenv
+            eval "$(rbenv init -)"
+            rbenv install -s 2.7.4
+            rbenv global 2.7.4
+            rbenv rehash
+            echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+            echo 'rbenv global 2.7.4' >> ~/.bash_profile
+            source ~/.bash_profile
+
+      - run:
+          name: Verify Ruby version
+          command: ruby -v
+
+      - run:
+          name: Install Bundler
+          command: gem install bundler -v 1.17.2
+
+      - run:
+          name: Install dependencies
+          command: |
+            bundle install
+            gem install cocoapods
+
+      - run:
+          name: Install CocoaPods dependencies
+          command: bundle exec pod install
+
+      - run:
+          name: Install coreutils
+          command: brew install coreutils
+
+      - run:
+          name: Debug Environment Variables
+          command: |
+            echo "MATCH_PASSWORD: CICDPROJECT"
+            echo "MATCH_GIT_BASIC_AUTHORIZATION: YWJ1eWFzZW5AeWFob28uY29tOmdocF9tZjFkdXVlUDk1RHFpWXVjaWhwR1FTc25yRFU5bFAxcTJHVW0="
+
+      - run:
+          name: Run Fastlane to Build the App
+          command: |
+            while sleep 60; do echo "=====[ $SECONDS seconds still running ]====="; done &
+            gtimeout -s KILL 20m bundle exec fastlane buildApp_localy
+            kill %1
+
+      # - run:
+      #     name: Generate a session token for App Store Connect
+      #     command: bundle exec fastlane generate_token
+
+      - run:
+          name: Upload build to TestFlight
+          command: |
+            bundle exec fastlane upload_app
+
+      - run:
+          name: Print Environment Variables
+          command: printenv
+
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+
+
+#gdfm-pgpi-lphq-wlgz
+
+# --verbose
+
+#bundle _1.17.2_ install --jobs 4 --retry 3
+
+# # .circleci/config.yml
+# version: 2.1
+# jobs:
+#   try-job:
+#     macos:
+#       xcode: 15.2.0
+#     steps:
+#       - run: echo "i am a job named try job within a workflow named try-workflow"
+
+# workflows:
+#   try-workflow:
+#     jobs:
+#       - try-job

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutUSViewController" customModule="Logissteam" customModuleProvider="target">
+            <connections>
+                <outlet property="aboutUsImage" destination="pZZ-gf-5Rt" id="fYb-jt-go3"/>
+                <outlet property="aboutUsTextView" destination="2qk-CQ-w6u" id="SCJ-qD-ofE"/>
+                <outlet property="backButton" destination="Iep-eZ-SfX" id="GVj-f7-gjy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0om-y2-rQe">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRU-an-UqS">
+                            <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Xkw-FF-cOh">
+                                    <rect key="frame" x="16" y="10" width="24" height="24"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iep-eZ-SfX">
+                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="3GX-ML-r1i"/>
+                                                <constraint firstAttribute="width" constant="24" id="mY8-XB-LCm"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="chevron.left" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="medium"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isFlipInRTL" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About US" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-dh-xd9">
+                                    <rect key="frame" x="162" y="12.333333333333327" width="69.333333333333314" height="19.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Zpd-dh-xd9" firstAttribute="centerY" secondItem="MRU-an-UqS" secondAttribute="centerY" id="4ZT-OE-gef"/>
+                                <constraint firstItem="Xkw-FF-cOh" firstAttribute="leading" secondItem="MRU-an-UqS" secondAttribute="leading" constant="16" id="DLo-Si-tR6"/>
+                                <constraint firstItem="Xkw-FF-cOh" firstAttribute="centerY" secondItem="MRU-an-UqS" secondAttribute="centerY" id="GxG-tZ-QHG"/>
+                                <constraint firstItem="Zpd-dh-xd9" firstAttribute="centerX" secondItem="MRU-an-UqS" secondAttribute="centerX" id="jGz-Dq-xPN"/>
+                                <constraint firstAttribute="height" constant="44" id="mCj-HK-eV0"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nh-ei-cYi">
+                            <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="W LOGISTTEAM" translatesAutoresizingMaskIntoConstraints="NO" id="pZZ-gf-5Rt">
+                                    <rect key="frame" x="81.666666666666686" y="57" width="230" height="155"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="155" id="vkd-p8-krf"/>
+                                    </constraints>
+                                </imageView>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2qk-CQ-w6u">
+                                    <rect key="frame" x="22" y="251" width="349" height="478"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <string key="text">We are a specialized and dedicated team, combining extensive experience and passion for technology, 
+To provide customized solutions that meet our customers' diverse needs and contribute
+ In promoting their sustainable growth.We are a specialized and dedicated team, combining extensive experience and passion for technology, 
+To provide customized solutions that meet our customers' diverse needs and contribute
+ In promoting their sustainable growth.We are a specialized and dedicated team, combining extensive experience and passion for technology, 
+To provide customized solutions that meet our customers' diverse needs and contribute
+ In promoting their sustainable growth.We are a specialized and dedicated team, combining extensive experience and passion for technology, 
+To provide customized solutions that meet our customers' diverse needs and contribute
+ In promoting their sustainable growth.We are a specialized and dedicated team, combining extensive experience and passion for technology, 
+To provide customized solutions that meet our customers' diverse needs and contribute
+ In promoting their sustainable growth.We are a specialized and dedicated team, combining extensive experience and passion for technology, 
+To provide customized solutions that meet our customers' diverse needs and contribute
+ In promoting their sustainable growth.We are a specialized and dedicated team, combining extensive experience and passion for technology, 
+To provide customized solutions that meet our customers' diverse needs and contribute
+ In promoting their sustainable growth.We are a specialized and dedicated team, combining extensive experience and passion for technology, 
+To provide customized solutions that meet our customers' diverse needs and contribute
+ In promoting their sustainable growth.We are a specialized and dedicated team, combining extensive experience and passion for technology, 
+To provide customized solutions that meet our customers' diverse needs and contribute
+ In promoting their sustainable growth.</string>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0078431372550000003" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="2qk-CQ-w6u" firstAttribute="leading" secondItem="8Nh-ei-cYi" secondAttribute="leading" constant="22" id="B4C-Bh-RQk"/>
+                                <constraint firstItem="pZZ-gf-5Rt" firstAttribute="top" secondItem="8Nh-ei-cYi" secondAttribute="top" constant="57" id="Mea-Cq-W7a"/>
+                                <constraint firstItem="pZZ-gf-5Rt" firstAttribute="width" secondItem="8Nh-ei-cYi" secondAttribute="width" multiplier="0.585242" id="S9p-Dm-RJH"/>
+                                <constraint firstAttribute="trailing" secondItem="2qk-CQ-w6u" secondAttribute="trailing" constant="22" id="f9Q-W6-bpk"/>
+                                <constraint firstItem="2qk-CQ-w6u" firstAttribute="top" secondItem="pZZ-gf-5Rt" secondAttribute="bottom" constant="39" id="gbE-8y-mOJ"/>
+                                <constraint firstAttribute="bottom" secondItem="2qk-CQ-w6u" secondAttribute="bottom" constant="20" id="hzb-nC-SXk"/>
+                                <constraint firstItem="pZZ-gf-5Rt" firstAttribute="centerX" secondItem="8Nh-ei-cYi" secondAttribute="centerX" id="jwY-bj-Ls5"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.92941176469999998" blue="0.99215686270000003" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="MRU-an-UqS" firstAttribute="leading" secondItem="0om-y2-rQe" secondAttribute="leading" id="9Q0-XB-yx9"/>
+                        <constraint firstAttribute="trailing" secondItem="MRU-an-UqS" secondAttribute="trailing" id="9kx-X7-i4p"/>
+                        <constraint firstAttribute="trailing" secondItem="8Nh-ei-cYi" secondAttribute="trailing" id="Csa-IX-9NN"/>
+                        <constraint firstAttribute="bottom" secondItem="8Nh-ei-cYi" secondAttribute="bottom" id="Li7-eP-UnI"/>
+                        <constraint firstItem="8Nh-ei-cYi" firstAttribute="leading" secondItem="0om-y2-rQe" secondAttribute="leading" id="eIR-En-1sk"/>
+                        <constraint firstItem="8Nh-ei-cYi" firstAttribute="top" secondItem="MRU-an-UqS" secondAttribute="bottom" id="hbt-2X-RkJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0078431372550000003" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0om-y2-rQe" secondAttribute="bottom" id="CPt-z2-K5n"/>
+                <constraint firstItem="MRU-an-UqS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ejy-Tv-rCQ"/>
+                <constraint firstItem="0om-y2-rQe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LXW-2d-Bvn"/>
+                <constraint firstItem="0om-y2-rQe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a8B-PB-X7a"/>
+                <constraint firstAttribute="trailing" secondItem="0om-y2-rQe" secondAttribute="trailing" id="aEF-Rg-qlC"/>
+            </constraints>
+            <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="W LOGISTTEAM" width="742" height="737"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+    </resources>
+</document>

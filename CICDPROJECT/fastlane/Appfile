@@ -1,0 +1,10 @@
+app_identifier("com.CICDPROJECT.CICDPROJECT") # The bundle identifier of your app
+apple_id("ahmed.abuelregal@expertapps.com.sa") # Your Apple Developer Portal username
+
+team_name("INNOVATION DEVELOPMENT FOR INFORMATION TECHNOLOGY")
+
+itc_team_id("125212996") # Your App Store Connect Team ID
+itc_team_name("INNOVATION DEVELOPMENT FOR INFORMATION TECHNOLOGY") # Your App Store Connect Team Name
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="NotificationsTableViewCell" customModule="Refeezy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czW-Nj-IdY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TsG-Hc-EYH">
+                                <rect key="frame" x="16" y="16" width="288" height="48"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="22s-9g-QgJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="42.333333333333336"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gea-mF-Jd1">
+                                                <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="42.333333333333336"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1321315715" translatesAutoresizingMaskIntoConstraints="NO" id="Qcw-Mm-Sdu">
+                                                        <rect key="frame" x="0.0" y="5.3333333333333321" width="32" height="31.999999999999996"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="uEL-KS-nit"/>
+                                                            <constraint firstAttribute="height" constant="32" id="xrI-O8-qtC"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IeG-OL-zig">
+                                                        <rect key="frame" x="44" y="0.0" width="138.66666666666666" height="42.333333333333336"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional gift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xM-0n-aav">
+                                                                <rect key="frame" x="0.0" y="0.0" width="138.66666666666666" height="14.333333333333334"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional gift Additional gift Additional gift Additional gift" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-ZD-Sw5">
+                                                                <rect key="frame" x="0.0" y="18.333333333333336" width="138.66666666666666" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/03/2025" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyQ-3c-AGp">
+                                                <rect key="frame" x="223" y="0.0" width="65" height="42.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Horizontal Divider" translatesAutoresizingMaskIntoConstraints="NO" id="PXK-oi-LYF">
+                                        <rect key="frame" x="0.0" y="46" width="288" height="2"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="9L2-kO-dgu"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TsG-Hc-EYH" firstAttribute="top" secondItem="czW-Nj-IdY" secondAttribute="top" constant="16" id="7bn-AT-cu5"/>
+                            <constraint firstAttribute="trailing" secondItem="TsG-Hc-EYH" secondAttribute="trailing" constant="16" id="Tcq-wo-ERR"/>
+                            <constraint firstItem="TsG-Hc-EYH" firstAttribute="leading" secondItem="czW-Nj-IdY" secondAttribute="leading" constant="16" id="dOP-vM-3hh"/>
+                            <constraint firstAttribute="bottom" secondItem="TsG-Hc-EYH" secondAttribute="bottom" constant="16" id="e78-kW-IVc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="czW-Nj-IdY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="58j-eD-ZmW"/>
+                    <constraint firstItem="czW-Nj-IdY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nzn-iN-lQ9"/>
+                    <constraint firstAttribute="trailing" secondItem="czW-Nj-IdY" secondAttribute="trailing" id="vbT-dT-CWD"/>
+                    <constraint firstAttribute="bottom" secondItem="czW-Nj-IdY" secondAttribute="bottom" id="x2o-s0-q01"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="notificationDateLabel" destination="jyQ-3c-AGp" id="n5d-fP-R1K"/>
+                <outlet property="notificationDescLabel" destination="EFa-ZD-Sw5" id="B3H-Qi-yeP"/>
+                <outlet property="notificationTitleLabel" destination="4xM-0n-aav" id="Xq8-fI-Vpv"/>
+            </connections>
+            <point key="canvasLocation" x="82" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Group 1321315715" width="32" height="32"/>
+        <image name="Horizontal Divider" width="178" height="1"/>
+    </resources>
+</document>

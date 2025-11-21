@@ -1,0 +1,185 @@
+/* 
+  Localizable.strings
+  Wala
+
+  Created by Ahmed Abo Al-Regal on 05/02/2024.
+  
+*/
+
+//MARK: - General
+"Error" = "خطأ";
+"OK" = "تم";
+"Cancel" = "إلغاء";
+"Done" = "تم";
+"(Today)" = "(اليوم)";
+"(Yesterday)" = "(أمس)";
+"KM" = "كم";
+"M" = "م";
+"SR" = "ر.س";
+"Last Update" = "آخر تحديث";
+"Save" = "حفظ";
+"Are you sure, want to logout ?" = "هل انت متأكد, تريد تسجيل الخروج";
+"Choose Photo From" = "اختار صورة من";
+"Camera" = "كاميرا";
+"Library" = "معرض الصور";
+"Delete Profile Photo" = "حذف الصورة الشخصية";
+"Logout" = "تسجيل الخروج";
+"Update Now" = "تحديث الآن";
+"Confirm" = "تأكيد";
+"Edit" = "تعديل";
+"Back" = "رجوع";
+"SAR" = "ر.س";
+
+//MARK: - Errors
+"no_internet" = "لا يوجد اتصال بالإنترنت";
+"An unknown error occurred." = "حدث خطأ غير معروف";
+"Data is Null." = "البيانات غير موجودة";
+"The request was malformed or invalid." = "الطلب كان مشوهاً أو غير صالح";
+"The request requires authentication." = "يرجى تسجيل الدخول اولا.";
+"The requested resource could not be found." = "تعذر العثور على المورد المطلوب";
+"An error occurred on the server." = "حدث خطأ على الخادم";
+"Server timeOut." = "انتهاء مهلة الخادم";
+"An error occurred while decoding the response." = "حدث خطأ أثناء فك تشفير الاستجابة";
+"An error occurred while encoding the request." = "حدث خطأ أثناء ترميز الطلب";
+
+//MARK: - AppLanguge
+"Language" = "اللغة";
+"Select Application Language" = "أختر لغة التطبيق";
+"Arabic" = "العربية";
+"App Language" = "لغة التطبيق";
+
+//MARK: - Login
+"Welcome!" = "مرحبًا!";
+"Login" = "تسجيل الدخول";
+"Mobile number" = "رقم الجوال";
+"Enter mobile number" = "أدخل رقم الجوال";
+"Don't have an account?" = "ليس لديك حساب؟";
+"Register" = "تسجيل";
+"Please, Enter the valid mobile number" = "يرجى إدخال رقم جوال صالح";
+
+//MARK: - Register
+"Create a new account" = "إنشاء حساب جديد";
+"The name" = "الاسم";
+"Enter the name" = "أدخل الاسم";
+"E-mail" = "البريد الإلكتروني";
+"Enter E-mail" = "أدخل البريد الإلكتروني";
+"IBAN certificate" = "شهادة IBAN";
+"Upload the IBAN certificate" = "قم بتحميل شهادة IBAN";
+"Already have an account?" = "هل لديك حساب بالفعل؟";
+
+//MARK: - Verification Code
+"Confirm account" = "تأكيد الحساب";
+"Enter the 4-digit code sent to the number ending" = "أدخل الرمز المكون من 4 أرقام المرسل إلى الرقم المنتهي";
+
+//MARK: - Tabbar
+"Home" = "الرئيسية";
+"Deals" = "الصفقات";
+"My Account" = "حسابي";
+"More" = "المزيد";
+
+//MARK: - Tabbar
+"Welcome" = "مرحبًا";
+"Search" = "بحث";
+"Possibility of reservation" = "إمكانية الحجز";
+"Quantity:" = "الكمية:";
+"Price:" = "السعر:";
+"Purchase plans" = "خطط الشراء";
+
+//MARK: - Deal details
+"Deal details" = "تفاصيل العرض";
+"Book the deal" = "حجز العرض";
+"Receiving the deal" = "استلام العرض";
+"Approval of a power of attorney to sell the deal" = "الموافقة على توكيل لبيع العرض";
+"Book the deal" = "حجز العرض";
+"Buy the deal" = "شراء العرض";
+"Please" = "يرجى";
+"select" = "اختيار";
+"or" = "أو";
+"Please, select purchase plan" = "يرجى اختيار خطة الشراء";
+"Reservation duration:" = "مدة الحجز:";
+"Booking conditions:" = "شروط الحجز:";
+"Cost:" = "التكلفة:";
+"day" = "يوم";
+
+//MARK: - Book The Deal
+"biannual" = "نصف سنوي";
+
+//MARK: - Book The Deal
+"Your purchasing plan:" = "خطة الشراء الخاصة بك:";
+"payment method:" = "طريقة الدفع:";
+
+//MARK: - Success POPUP
+"The deal was bought" = "تم شراء العرض";
+"We emphasize our continuous endeavor to provide
+The best solutions for our customers" = "نؤكد على سعينا المستمر لتقديم
+أفضل الحلول لعملائنا";
+
+//MARK: - Purchase plans
+"Purchase plans" = "خطط الشراء";
+"Purchase plan" = "خطة الشراء";
+"Download" = "تحميل";
+"Plan duration" = "مدة الخطة";
+"(3 months)" = "(3 أشهر)";
+"Payment duration" = "ميعاد كل دفعة";
+"First payment date" = "تاريخ أول دفعة";
+"Profit rate" = "نسبة الربح";
+
+//MARK: - Deal
+"Deals" = "الصفقات";
+"Current deals" = "الصفقات الحالية";
+"Previous deals" = "الصفقات السابقة";
+"Purchased" = "تم الشراء";
+"Next batch:" = "الدفعة التالية:";
+"Date of next payment" = "تاريخ الدفع التالي";
+"See the rest of the payments" = "شاهد باقي المدفوعات";
+
+//MARK: - Deal Details
+"Deal details" = "تفاصيل العرض";
+"Your contracts" = "عقودك";
+"Transfer ownership of the deal" = "نقل ملكية الصفقة";
+"View payments" = "عرض المدفوعات";
+
+//MARK: - Upcoming Payments
+"Upcoming Payments" = "المدفوعات القادمة";
+"Amount:" = "المبلغ:";
+"Status:" = "الحالة:";
+"Collection date:" = "تاريخ التحصيل:";
+"Download invoice" = "تحميل الفاتورة";
+
+//MARK: - Contracts
+"Contracts" = "العقود";
+"Ownership transfer contract" = "عقد نقل الملكية";
+"Download contract" = "تحميل العقد";
+
+//MARK: - Transfer ownership of the deal
+"Transfer ownership of the deal" = "نقل ملكية الصفقة";
+"Please write the mobile number you want to transfer
+ Ownership of the transaction is transferred to him" = "يرجى كتابة رقم الجوال الذي ترغب في نقل
+ ملكية المعاملة إليه";
+
+//MARK: - Success Transfer Ownership
+"Data saved" = "تم حفظ البيانات";
+"The data will be reviewed and we will contact you" = "سيتم مراجعة البيانات وسنقوم بالتواصل معك";
+
+//MARK: - My Account
+"My Account" = "حسابي";
+"Delete Account" = "حذف الحساب";
+"Are you sure, want to delete account ?" = "هل أنت متأكد, أنك تريد حذف الحساب؟";
+
+//MARK: - More
+"More" = "المزيد";
+"About US" = "عن الشركة";
+"Terms And Conditions" = "الشروط والأحكام";
+"Privacy Policy" = "سياسة الخصوصية";
+"Contact US" = "اتصل بنا";
+
+//MARK: - Contact US
+"First name" = "الاسم الأول";
+"Enter first name" = "أدخل الاسم الأول";
+"Last name" = "الاسم الأخير";
+"Enter last name" = "أدخل الاسم الأخير";
+"Notes" = "ملاحظات";
+"Write your message here" = "اكتب رسالتك هنا";
+"Write your message" = "اكتب رسالتك";
+"Send" = "إرسال";
+"Please, Enter the valid Email" = "يرجى إدخال بريد إلكتروني صالح";

@@ -1,0 +1,211 @@
+/* 
+  Localizable.strings
+  Wala
+
+  Created by Ahmed Abo Al-Regal on 05/02/2024.
+  
+*/
+
+//MARK: - General
+"Error" = "خطأ";
+"OK" = "تم";
+"Cancel" = "إلغاء";
+"Done" = "تم";
+"(Today)" = "(اليوم)";
+"(Yesterday)" = "(أمس)";
+"KM" = "كم";
+"M" = "م";
+"SR" = "ر.س";
+"Last Update" = "آخر تحديث";
+"Save" = "حفظ";
+"Are you sure, want to logout ?" = "هل انت متأكد, تريد تسجيل الخروج";
+"Choose Photo From" = "اختار صورة من";
+"Camera" = "كاميرا";
+"Library" = "معرض الصور";
+"Delete Profile Photo" = "حذف الصورة الشخصية";
+"Logout" = "تسجيل الخروج";
+"Update Now" = "تحديث الآن";
+"Confirm" = "تأكيد";
+"Edit" = "تعديل";
+"Back" = "رجوع";
+"SAR" = "ر.س";
+"Skip" = "تخطي";
+"Welcome you in" = "أهلا بك في";
+"Langauge" = "اللغة";
+"No data found" = "لم يتم العثور على بيانات";
+
+//MARK: - Errors
+"no_internet" = "لا يوجد اتصال بالإنترنت";
+"An unknown error occurred." = "حدث خطأ غير معروف";
+"Data is Null." = "البيانات غير موجودة";
+"The request was malformed or invalid." = "الطلب كان مشوهاً أو غير صالح";
+"The request requires authentication." = "يرجى تسجيل الدخول اولا.";
+"The requested resource could not be found." = "تعذر العثور على المورد المطلوب";
+"An error occurred on the server." = "حدث خطأ على الخادم";
+"Server timeOut." = "انتهاء مهلة الخادم";
+"An error occurred while decoding the response." = "حدث خطأ أثناء فك تشفير الاستجابة";
+"An error occurred while encoding the request." = "حدث خطأ أثناء ترميز الطلب";
+
+//MARK: - Splash
+"Every room" = "كل غرفة";
+"Featured product + special gift" = "منتج مميز + هدية خاصة";
+
+//MARK: - AppLanguge
+"Language" = "اللغة";
+"Select Application Language" = "أختر لغة التطبيق";
+"Arabic" = "العربية";
+"App Language" = "لغة التطبيق";
+
+//MARK: - Login
+"Welcome again!" = "مرحبا بك مجددا!";
+"Welcome!" = "مرحبًا!";
+"Login" = "تسجيل الدخول";
+"Mobile number" = "رقم الجوال";
+"Enter mobile number" = "أدخل رقم الجوال";
+"Don't have an account?" = "ليس لديك حساب؟";
+"Register" = "تسجيل";
+"Please, Enter the valid mobile number" = "يرجى إدخال رقم جوال صالح";
+
+//MARK: - Register
+"Create a new account" = "إنشاء حساب جديد";
+"Full name" = "الاسم";
+"Enter full name" = "أدخل الاسم";
+"E-mail" = "البريد الإلكتروني";
+"Enter E-mail" = "أدخل البريد الإلكتروني";
+"Your first step towards a unique shopping experience" = "خطوتك الأولى نحو تجربة تسوق فريدة";
+"Already have an account?" = "هل لديك حساب بالفعل؟";
+
+//MARK: - Verification Code
+"Verify your account and complete your journey with us." = "تحقق من حسابك وأكمل رحلتك معنا";
+"Enter the verification code sent to your number" = "أدخل رمز التحقق المرسل إلى رقمك";
+"Not sent?" = "لم يتم الإرسال؟";
+"Resend" = "إعادة إرسال";
+
+//MARK: - Tabbar
+"Home" = "الرئيسية";
+"Rooms" = "الغرف";
+"Gifts" = "الهدايا";
+"More" = "المزيد";
+
+//MARK: - Home
+"Welcome" = "مرحبًا";
+"Search" = "بحث";
+"All rooms" = "كل الغرف";
+"Finished rooms" = "الغرف المنتهية";
+"Product price" = "سعر المنتج";
+"Total products" = "إجمالي المنتجات";
+"Remaining" = "المتبقي";
+"Win the super gift after selling all products" = "الفوز بالهدية السوبر بعد الإنتهاء من بيع جميع المنتجات";
+
+//MARK: - Room details
+"Room details" = "تفاصيل الغرفة";
+"Control professional" = "محترف التحكم";
+"Super room gift" = "هدية الغرفة السوبر";
+"A super worthy gift" = "هدية سوبر تستحقها";
+"Ready for?" = "مستعد لتجربة استثنائية؟";
+"Buy now" = "اشتري الآن";
+
+//MARK: - Gifts
+"Gifts" = "الهدايا";
+
+//MARK: - Rooms
+"Rooms" = "الغرف";
+
+//MARK: - Choose Products
+"Select products" = "اختر المنتجات";
+"Choosed" = "تم اختيار";
+"Price" = "السعر";
+"Product number" = "رقم المنتج";
+
+//MARK: - First Payment Operation
+"Payment operation" = "عملية الدفع";
+"Products" = "المنتجات";
+"Deliver way" = "طريقة التوصيل";
+"Payment method" = "طريقة الدفع";
+"Online" = "اونلاين";
+"ApplePay" = "آبل باي";
+"Name on card" = "الإسم على الكارت";
+"Card number" = "رقم الكارت";
+"Enter card number" = "ادخل رقم الكارت";
+"Expired date" = "تاريخ الإنتهاء";
+"Enter expired date" = "ادخل تاريخ الإنتهاء";
+"CVV" = "CVV";
+"Enter CVV" = "ادخل CVV";
+
+//MARK: - Second Payment Operation
+"Payment operation" = "عملية الدفع";
+"More" = "المزيد";
+"Request details" = "ملخص الطلب";
+"Total products"= "إجمالي المنتجات";
+"Sub Total" = "المجموع الفرعي";
+"Discount" = "خصم";
+"Tax" = "الضريبة";
+"Total" = "المجموع الكلي";
+
+//MARK: - Requests
+"Requests" = "الطلبات";
+"Current requests" = "طلبات حالية";
+"Previous requests" = "طلبات سابقة";
+"Product gift" = "هدية المنتج";
+"Win super gift" = "الفائز بالهدية السوبر";
+"We will tell who is win soon" = "سيتم الإعلان عن الفائز بعد";
+"Day" = "يوم";
+"Hour" = "ساعة";
+"Minute" = "دقيقة";
+"Second" = "ثواني";
+
+//MARK: - My Address
+"My Addresses" = "عناويني";
+"Add new address" = "إضافة عنوان جديد";
+
+//MARK: - Add new address
+"Add new address" = "إضافة عنوان جديد";
+"Address" = "العنوان";
+"Enter the address" = "ادخل العنوان";
+"City" = "المدينة";
+"Enter the city" = "ادخل المدينة";
+"E-mail" = "البريد الإلكتروني";
+"Enter E-mail" = "أدخل البريد الإلكتروني";
+"Mobile number" = "رقم الجوال";
+"Enter mobile number" = "أدخل رقم الجوال";
+
+//MARK: - My Account
+"My Account" = "حسابي";
+"Delete Account" = "حذف الحساب";
+"Are you sure, want to delete account ?" = "هل أنت متأكد, أنك تريد حذف الحساب؟";
+"Update information" = "تحديث البيانات";
+
+//MARK: - More
+"More" = "المزيد";
+"My Account" = "حسابي";
+"My Addresses" = "عناويني";
+"Requests" = "الطلبات";
+"About US" = "عن الشركة";
+"Language" = "اللغة";
+"Terms And Conditions" = "الشروط والأحكام";
+"Privacy Policy" = "سياسة الخصوصية";
+"Contact US" = "تواصل معنا";
+
+//MARK: - Language
+"Language" = "اللغة";
+
+//MARK: - About US
+"Welcome you at" = "أهلا بك في";
+
+//MARK: - Terms And Conditions
+"Welcome you at" = "أهلا بك في";
+
+//MARK: - Contact US
+"Contact details" = "بيانات التواصل";
+"First name" = "الاسم الأول";
+"Enter first name" = "أدخل الاسم الأول";
+"Last name" = "الاسم الأخير";
+"Enter last name" = "أدخل الاسم الأخير";
+"Message" = "رسالتك";
+"Write your message here" = "اكتب رسالتك هنا";
+"Write your message" = "اكتب رسالتك";
+"Send" = "إرسال";
+"Please, Enter the valid Email" = "يرجى إدخال بريد إلكتروني صالح";
+
+//MARK: - Notifications
+"Notifications" = "الإشعارات";

@@ -1,0 +1,256 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  before_all do
+    setup_circle_ci
+  end
+
+  desc "Description of what the lane does"
+  lane :custom_lane do
+    print "Fastlane works successfully on iOS"
+  end
+
+  # desc "Clear Fastlane cache"
+  # lane :clear_cache do
+  #   sh "fastlane clear_cache"
+  # end
+
+  #desc: "Releases pur app to app store"
+  #lane: release_app do
+    #print "put all lanes here"
+  #end
+
+  lane :create_app do
+    desc "create app in app developer portal and app store connect"
+    produce(
+      username: 'ahmed.abuelregal@expertapps.com.sa',
+      app_identifier: 'com.CICDPROJECT.CICDPROJECT',
+      app_name: 'CICDPROJECT',
+      language: 'English',
+      app_version: '1.0',
+      sku: 'CICD_PROJECT',
+      team_name: 'INNOVATION DEVELOPMENT FOR INFORMATION TECHNOLOGY', # only necessary when in multiple teams
+    )
+    end
+
+  desc "Build iOS App"
+  lane :buildApp_localy do
+  # Run match before gym for code signing on a new machine
+  # run match before gym for => if this app run in new machien 
+
+  if !is_ci
+    puts "I'm a computer"
+  end
+
+  match(
+    type: "appstore",
+    clone_branch_directly: true,
+    git_basic_authorization: ENV["YWJ1eWFzZW5AeWFob28uY29tOmdocF9tZjFkdXVlUDk1RHFpWXVjaWhwR1FTc25yRFU5bFAxcTJHVW0="],
+    #readonly: is_ci, 
+    readonly: true,
+    git_url: "https://github.com/abuelregal7/CICDPROJECT",
+    git_branch: "certs"
+  )
+  
+  # Ensure Xcode 15 or later is used
+  xcode_version = `xcodebuild -version`.match(/Xcode\s(\d+\.\d+)/)[1]
+  raise "Xcode 15 or later is required" if Gem::Version.new(xcode_version) < Gem::Version.new('15.0')
+
+  # Increment the build number
+  increment_build_number(
+  build_number: "10",      # Specify a custom build number
+  xcodeproj: "CICDPROJECT.xcodeproj"  # Path to your Xcode project
+  )
+
+
+  # Build the app
+  gym(
+    workspace: "CICDPROJECT.xcworkspace", 
+    configuration: "Release",
+    scheme: "CICDPROJECT",
+    #silent: true,
+    clean: true,
+    #output_directory: "/Users/ahmedaboal-regal/Desktop/CICDPROJECT/",
+    output_name: "CICDPROJECT.ipa",       # Specify the name of the .ipa file to generate (including file extension)
+    export_method: "app-store",            # or "ad-hoc", "enterprise", "development" based on your distribution method
+    export_options: {
+      provisioningProfiles: {
+        "com.yourcompany.yourapp" => "match AppStore com.CICDPROJECT.CICDPROJECT"
+      }
+    }
+  )
+  end
+
+  desc "Generate a session token for App Store Connect"
+  lane :generate_token do
+    # This command will prompt for 2FA and generate the session token
+    api_key = spaceship_login(
+      username: "ahmed.abuelregal@expertapps.com.sa",
+      password: "gdfm-pgpi-lphq-wlgz"
+    )
+    puts api_key.to_json
+
+    api_key = app_store_connect_api_key(
+      key_id: "YOUR_KEY_ID",
+      issuer_id: "YOUR_ISSUER_ID",
+      key_content: ENV["APP_STORE_CONNECT_API_KEY_CONTENT"]
+    )
+
+  end
+
+  desc "To deliver our app"
+  lane :upload_app do
+
+    retry_count = 3  # Number of times to retry
+
+    begin
+      retry_count -= 1
+      # Your existing lane code here
+      # Ensure directory_path and ipa_path are correctly defined
+  
+
+    # Directory Path
+    directory_path = '/Users/distiller/project' #/Users/ahmedaboal-regal/Desktop/CICDPROJECT #/Users/distiller/project
+
+    # Print directory contents for debugging
+    UI.message("Contents of directory: #{Dir.entries(directory_path)}")
+
+    ipa_path = "#{directory_path}/CICDPROJECT.ipa" # Adjust this to match your actual IPA file name
+
+    # Check if the IPA file exists
+    if File.exist?(ipa_path)
+      UI.message("IPA file found at path: #{ipa_path}")
+    else
+      UI.user_error!("IPA file not found at path: #{ipa_path}")
+    end
+
+    # spaceship(
+    #   username: "ahmed.abuelregal@expertapps.com.sa",
+    #   apple_id: "ahmed.abuelregal@expertapps.com.sa",
+    #   password: "A911998a@",
+    #   team_id: "125212996",
+    #   team_name: "INNOVATION DEVELOPMENT FOR INFORMATION TECHNOLOGY"
+    # )
+
+    # api_key = spaceship_login(
+    #   username: "ahmed.abuelregal@expertapps.com.sa",
+    #   apple_id: "ahmed.abuelregal@expertapps.com.sa",
+    #   password: "A911998a@",
+    #   team_id: "125212996",
+    #   team_name: "INNOVATION DEVELOPMENT FOR INFORMATION TECHNOLOGY"
+    # )
+    # puts api_key.to_json
+
+    deliver(
+      username: "ahmed.abuelregal@expertapps.com.sa",
+      app_identifier: "com.CICDPROJECT.CICDPROJECT",
+      team_id: "125212996",
+      team_name: "INNOVATION DEVELOPMENT FOR INFORMATION TECHNOLOGY",
+      ipa: ipa_path,
+      skip_metadata: true,
+      skip_screenshots: true,
+      skip_binary_upload: true,
+      skip_app_version_update: true,
+      force: true
+      #api_key: { session: ENV['FASTLANE_SESSION'] }
+    )
+    rescue => e
+      if retry_count > 0
+        UI.error("Error occurred: #{e.message}. Retrying...")
+        retry
+      else
+        UI.error("Failed after retrying #{retry_count} times: #{e.message}")
+        raise e
+      end
+    end
+  end
+
+  desc "Upload build to TestFlight"
+  lane :upload_to_testflight do
+    ipa_path = "/Users/ahmedaboal-regal/Desktop/CICDPROJECT/CICDPROJECT.ipa"
+    UI.message("IPA file path: #{ipa_path}")
+
+    if File.exist?(ipa_path)
+      UI.message("IPA file found at path: #{ipa_path}")
+    else
+      UI.user_error!("IPA file not found at path: #{ipa_path}")
+    end
+
+    begin
+      UI.message("Starting upload to TestFlight...")
+      upload_to_testflight(
+        username: "ahmed.abuelregal@expertapps.com.sa",
+        app_identifier: "com.CICDPROJECT.CICDPROJECT",
+        api_key_path: "path/to/api_key.json", # Ensure this path is correct
+        ipa: ipa_path,
+        skip_waiting_for_build_processing: true
+      )
+      UI.success("Upload to TestFlight completed successfully!")
+    rescue => e
+      UI.error("Error uploading to TestFlight: #{e.message}")
+      UI.error("Backtrace: #{e.backtrace.join("\n")}")
+      raise e
+    end
+  end
+
+  # desc "Upload build to TestFlight"
+  # lane :upload_to_testflight do
+  #   ipa_path = "/Users/ahmedaboal-regal/Desktop/CICDPROJECT/CICDPROJECT.ipa"
+  #   UI.message("IPA file path: #{ipa_path}")
+
+  #   if File.exist?(ipa_path)
+  #     UI.message("IPA file found at path: #{ipa_path}")
+  #   else
+  #     UI.user_error!("IPA file not found at path: #{ipa_path}")
+  #   end
+
+  #   begin
+  #     UI.message("Starting upload to TestFlight...")
+  #     upload_to_testflight(
+  #       username: "ahmed.abuelregal@expertapps.com.sa",
+  #       app_identifier: "com.CICDPROJECT.CICDPROJECT",
+  #       ipa: ipa_path,
+  #       disable_semantics: true
+  #     )
+  #     UI.success("Upload to TestFlight completed successfully!")
+  #   rescue => e
+  #     UI.error("Error uploading to TestFlight: #{e.message}")
+  #     UI.error("Backtrace: #{e.backtrace.join("\n")}")
+  #     raise e
+  #   end
+  # end
+
+end
+
+# desc "Upload build to TestFlight"
+  # lane :upload_to_testflight do
+  #   ipa_path = "/Users/ahmedaboal-regal/Desktop/CICDPROJECT/CICDPROJECT.ipa" # Path to the generated IPA file
+
+  #   # Check if the IPA file exists
+  #   if File.exist?(ipa_path)
+  #     UI.message("IPA file found at path: #{ipa_path}")
+  #   else
+  #     UI.user_error!("IPA file not found at path: #{ipa_path}")
+  #   end
+
+  #   upload_to_testflight(
+  #     ipa: ipa_path # Path to the generated IPA file
+  #     # Credentials will be picked from environment variables or Fastlane credentials manager
+  #   )
+  # end
